@@ -8,10 +8,10 @@ import { Quiz, Answers, Choice } from './quiz.model';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  private answers: Answers;
-  private quiz: Quiz;
-  private currentQuestionIndex: number;
-  private showResults = false;
+  quiz: Quiz;
+  currentQuestionIndex: number;
+  showResults = false;
+  answers: Answers;
 
   constructor(private questionsService: QuestionsService) {
     this.questionsService.getJSON('maths').subscribe((data) => {
