@@ -1,8 +1,12 @@
-<div class="results">
-  <h2>Results</h2>
-  <div class="answer" *ngFor="let a of answers.values" [ngClass]="{correct:
-    a.correct}">
+<mat-card>
+  <mat-card-title class="title">Results</mat-card-title>
+  <mat-card-content class="answer mat-app-background" *ngFor="let a of
+    answers.values" [ngClass]="{correct: a.correct}">
     {{a.value}}
-  </div>
-  <a routerLink="/welcome" class="btn btn-primary">Choose another quiz</a>
-</div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="accent" class="btn btn-primary">
+      <a routerLink="/welcome" class="btn btn-primary">Choose another quiz</a>
+    </button>
+  </mat-card-actions>
+</mat-card>

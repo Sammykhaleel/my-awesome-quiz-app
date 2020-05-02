@@ -1,1 +1,18 @@
-<p>Welcome to my awesome quiz app!</p>
+<!-- <p>Welcome to my awesome quiz app!</p> -->
+
+<div>
+  <mat-card color="primary">
+    <mat-card-title class="title"> Quizzes</mat-card-title>
+  </mat-card>
+  <div *ngFor="let q of quiz">
+    <mat-card>
+      <mat-card-title>{{q.label}}</mat-card-title>
+      <mat-card-subtitle>{{q.description}}</mat-card-subtitle>
+      <mat-card-actions>
+        <button mat-raised-button color="accent" class="btn btn-primary">
+          <a routerLink="/{{q.name}}" class="btn btn-primary">Select this quiz</a>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
